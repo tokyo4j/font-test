@@ -10,7 +10,7 @@ qt6: qt6.cpp
 	$(CXX) -fPIC -o $@ $< $(shell pkg-config --cflags --libs Qt6Widgets)
 
 clean:
-	rm -f cairo gtk4 qt6 qt6-variants *.png
+	rm -f cairo gtk4 qt6 qt6-variants
 
 qt6-variants: qt6-variants.cpp
 	$(CXX) -fPIC -o $@ $< $(shell pkg-config --cflags --libs Qt6Widgets freetype2)

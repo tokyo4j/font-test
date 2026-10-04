@@ -35,7 +35,14 @@ FreeType 26.6.20, HarfBuzz 14.5.0 on Wayland without fractional scaling.
   backgrounds.
 - `qt6.png`: Japanese is noticeably bolder on the black background only.
 
+| cairo | GTK4 | Qt6 |
+|-------|------|-----|
+| ![cairo](cairo.png) | ![gtk4](gtk4.png) | ![qt6](qt6.png) |
+
 `qt6-variants` (light-on-dark column):
+
+![qt6-variants](qt6-variants.png)
+
 
 | Variant                                         | Japanese bolder on dark? |
 |-------------------------------------------------|--------------------------|
@@ -79,6 +86,8 @@ Confirmation: `qt6-variants --no-stem-darkening` sets `no-stem-darkening` on
 Qt's FreeType library (via the exported but non-public `qt_getFreetype()`)
 before any font loads. That disables both behaviours, and all dark rows then
 match the Latin weight.
+
+![qt6-variants-no-stem-darkening](qt6-variants-no-stem-darkening.png)
 
 ## Workarounds
 
